@@ -1,0 +1,84 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="css-bootstraap.min.css">
+    <title>News Story Page</title>
+    <style>
+        /* Add your custom styles here if needed */
+        
+        body {
+            padding-top: 56px;
+            /* Adjust for fixed navbar */
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="56">
+
+    <!-- Navbar with Scrollspy -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Detective raman</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#section1">Section 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section2">Section 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section3">Section 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 id="section1">Section 1</h1>
+        <p>Tenali Raman was once walking along a forest path when he was stopped by a merchant. “I’m looking for my camel which has strayed away. Did you see it passing by?” asked the merchant. “Had the camel hurt its leg?” asked Raman. “Oh yes! That means
+            you have seen my camel!” said the merchant. “Only its footprints. See, you can see footprints of an animal with three legs,” said Raman, pointing out the footprints on the ground. “It was dragging the other leg because it was hurt in that
+            leg.”
+        </p>
+
+        <!-- Tooltip for Photo 1 -->
+        <img src="tenali-raman.jpeg" alt="Tenali raman" data-toggle="tooltip" title="Tooltip for Photo 1" class="img-thumbnail" style="width: 200px;">
+
+        <h1 id="section2" class="mt-5">Section 2</h1>
+        <p>“Was it blind in one eye?” Raman asked the merchant. “Yes, yes,” said the merchant eagerly. “Was it loaded it with wheat on one side and sugar on the other side?” asked Raman. “Yes, you are right,” said the merchant. “So you have seen my camel!”
+            exclaimed the merchant. Raman looked upset. “Did I say I saw your camel?” “You have given the exact description of my camel,” said the merchant. “I saw no camel,” said Raman. “Do you see those plants lined up on both sides of this path? You
+            can clearly see, some animal has eaten leaves of plants on the left, but the plants on the other side remain untouched. So the animal could see with only one eye. “Look down. You can see ants lined up on this side which means, the animal was
+            loaded with sugar bag on this side. The bag had a hole, which allowed the sugar to fall off.”</p>
+
+        <!-- Tooltip for Photo 2 -->
+        <img src="ant.jpeg" alt="Ant" data-toggle="tooltip" title="Tooltip for Photo 2" class="img-thumbnail" style="width: 200px;">
+
+        <!-- Collapsible Content -->
+        <button class="btn btn-primary mt-3" type="button" data-toggle="collapse" data-target="#collapseContent" aria-expanded="false" aria-controls="collapseContent">
+      More about ants.
+    </button>
+        <div class="collapse mt-3" id="collapseContent">
+            <div class="card card-body">
+                Ants are common insects, but they have some unique capabilities—including their legendary communication skills that allow their colonies to function as superorganisms. There are 20 quadrillion ants on Earth—that’s 2.5 million ants for every human.
+            </div>
+        </div>
+
+        <h1 id="section3" class="mt-5">Section 3</h1>
+        <p>“You can see grains of wheat fallen on the other side. The bag on this side also must have holes in it,” said Raman. “I can see everything you showed me,” protested the merchant,”but I still don’t see my camel.” “You follow this trail and soon
+            you will catch up with your animal. After all it is hurt in one leg and you seem to be hale and hearty,” said Raman. The merchant took his advice and followed the trail left by the camel. Soon he caught up with the poor animal, limping along.
+            “Rani!” the merchant shouted in happiness, as he ran to his camel.</p>
+
+        <!-- Popover for Photo 3 -->
+        <img src="camel.jpeg" alt="Camel" data-toggle="popover" title="Popover Title" data-content="This is a Bootstrap Popover" class="img-thumbnail" style="width: 200px;">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</body>
+
+</html>

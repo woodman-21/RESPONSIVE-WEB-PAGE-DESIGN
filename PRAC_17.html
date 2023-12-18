@@ -1,0 +1,72 @@
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-bootstraap.min.css">
+    <title>Service Providers</title>
+    <style>
+        /* Add your custom styles here if needed */
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <!-- Bootstrap Panel Component -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Service Providers</h3>
+            </div>
+            <div class="panel-body">
+
+                <!-- Bootstrap List Group Component -->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge badge-primary">Category 1</span> Service Provider 1
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge badge-success">Category 2</span> Service Provider 2
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge badge-info">Category 3</span> Service Provider 3
+                    </li>
+                    <!-- Add more list items for other service providers -->
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Bootstrap Alert Messages -->
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> You have successfully viewed the service providers.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+
+        <!-- Bootstrap Alert Message After Close -->
+        <div id="afterCloseMessage" class="alert alert-info alert-dismissible fade" role="alert">
+            This message appears after the alert has been closed.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show the message after the Bootstrap alert has been closed
+        $('.alert').on('closed.bs.alert', function() {
+            $('#afterCloseMessage').alert('show');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bootstrap Progress Bars</title>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Bootstrap Progress Bars</h2>
+
+        <!-- Task A: Creating Progress Bars -->
+        <div class="progress mb-3">
+            <div class="progress-bar" style="width: 50%;">
+                50%
+            </div>
+        </div>
+
+        <!-- Task B: Adding Label to Progress Bars -->
+        <div class="progress mb-3">
+            <div class="progress-bar" style="width: 75%;">
+                75%
+            </div>
+        </div>
+
+        <!-- Task C: Creating Multi-color, Striped, and Animated Progress Bars -->
+        <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 25%;">
+                25%
+            </div>
+        </div>
+
+        <div class="progress mb-3">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%;">
+                60%
+            </div>
+        </div>
+
+        <!-- Task D: Changing Value of Progress Bar Dynamically using JavaScript -->
+        <div class="progress mb-3">
+            <div id="dynamicProgressBar" class="progress-bar bg-info" style="width: 30%;">
+                30%
+            </div>
+        </div>
+
+        <!-- Example button to trigger dynamic update -->
+        <button onclick="updateProgressBar(85)">Update Progress Bar</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to update the progress bar dynamically
+        function updateProgressBar(value) {
+            const progressBar = document.getElementById('dynamicProgressBar');
+            progressBar.style.width = value + '%';
+            progressBar.innerHTML = value + '%';
+        }
+    </script>
+</body>
+
+</html>

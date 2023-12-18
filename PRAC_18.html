@@ -1,0 +1,83 @@
+<html>
+
+
+<head>
+    <title>Page Transitions</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="css-bootstraap.min.css">
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.bing.com/search?q=computer+wikipedia&qs=ds&form=QBRE">web site visit</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">🏡 Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">ℹ About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">📡 Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="home" class="page active">
+        <h1>Home Page</h1>
+
+    </div>
+
+    <div id="about" class="page">
+        <h1>About Page</h1>
+
+    </div>
+
+    <div id="contact" class="page">
+        <h1>Contact Page</h1>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.nav-link').on('click', function(e) {
+                e.preventDefault();
+
+
+                $('.page').removeClass('active');
+
+
+                var targetPageId = $(this).attr('href');
+
+
+                $(targetPageId).addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
